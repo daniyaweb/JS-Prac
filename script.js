@@ -9,15 +9,15 @@ var age = prompt("Enter your Age");
 
 if (age < 12) {
     console.log("Not Allowed");
-    
+
 }
-    else if (age >= 12 && age < 18) {
+else if (age >= 12 && age < 18) {
     console.log("Rs. 200/ hour");
-    
+
 }
 else {
     console.log("Rs. 400/ hour");
-    
+
 }
 
 
@@ -29,17 +29,17 @@ else {
 // Otherwise → No discount 
 
 var bill = prompt("How much is your Bill")
-    if( bill > 5000){
-        console.log("20% Discount");
-        
-    }
-        else if( bill >= 3000 && bill <=5000 ){
-            console.log("10% Discount");
-            
-        }
-        else{
-           console.log("No Discount");
-        }
+if (bill > 5000) {
+    console.log("20% Discount");
+
+}
+else if (bill >= 3000 && bill <= 5000) {
+    console.log("10% Discount");
+
+}
+else {
+    console.log("No Discount");
+}
 
 
 // 03: Online Game Level Checker
@@ -52,20 +52,21 @@ var bill = prompt("How much is your Bill")
 // Output: Display the player's level
 
 var score = prompt("What is your current score?")
-    if(score >=0 && score <= 100){
-        console.log("Beginner");
+if (score >= 0 && score <= 100) {
+    console.log("Beginner");
 }
-        else if(score >=101 && score <= 300){
-        console.log("Intermediate");
-    }
-else if(score >= 301 && score <= 500){
-        console.log("Advanced");
+else if (score >= 101 && score <= 300) {
+    console.log("Intermediate");
 }
-else if(score <0 ){
+else if (score >= 301 && score <= 500) {
+    console.log("Advanced");
+}
+else if (score < 0) {
     console.log("Invalid Score");
-    
+
 }
-else{console.log("Master");
+else {
+    console.log("Master");
 }
 
 
@@ -76,31 +77,55 @@ else{console.log("Master");
 // •	Print multiplication table from 1 to 10
 // Output: Display the full multiplication table of the given number up to 10
 
-var num= prompt("Enter a Number")
-for (let i= 1; i<= 10; i++){
-    console.log(num, "X" , i , "=" , num* i);
-    
+var num = prompt("Enter a Number")
+for (let i = 1; i <= 10; i++) {
+    console.log(num, "X", i, "=", num * i);
+
 }
 
 
+    // Ques:05 Write a function named calculateSalary that calculates an employee’s final salary. The function should take three inputs: base salary, bonus amount, and tax percentage.
 
-// Ques:05 Write a function named calculateSalary that calculates an employee’s final salary. The function should take three inputs: base salary, bonus amount, and tax percentage.
+    // First, combine the base salary and bonus to get the total income. Then apply tax on this total income using the given percentage. Finally, return the remaining amount after tax deduction as the final salary.
 
-// First, combine the base salary and bonus to get the total income. Then apply tax on this total income using the given percentage. Finally, return the remaining amount after tax deduction as the final salary.
+    function calculateSalary(baseSalary, bonus, taxPercent) {
+        return (baseSalary + bonus) - ((baseSalary + bonus) * taxPercent / 100)
+    }
 
-function calculateSalary(baseSalary, bonus, taxPercent) {
-    return (baseSalary + bonus) - ((baseSalary + bonus) * taxPercent / 100)
-}
+    console.log(calculateSalary(30000, 10000, 10));
 
-console.log(calculateSalary(30000, 10000, 10));
+    // Ques:06 Write a function named convertToPKR that converts an amount from US Dollars (USD) to Pakistani Rupees (PKR). The function should take two inputs: the amount in dollars and the exchange rate.
 
-// Ques:06 Write a function named convertToPKR that converts an amount from US Dollars (USD) to Pakistani Rupees (PKR). The function should take two inputs: the amount in dollars and the exchange rate.
-
-// Multiply the dollar amount by the exchange rate and return the result as the amount in PKR.
+    // Multiply the dollar amount by the exchange rate and return the result as the amount in PKR.
 
 
-function convertToPkr(dollar , rate){
+    function convertToPkr(dollar, rate) {
 
-return( dollar * rate)}
+        return (dollar * rate)
+    }
 
-console.log(convertToPkr(300 , 280));
+    console.log(convertToPkr(300, 280));
+
+
+    // Ques:07 Write a function named fuelCost that calculates the total fuel expense for a trip. The function should take two inputs: the number of kilometers traveled and the fuel cost per kilometer.
+
+    // Multiply the distance traveled by the cost per kilometer and return the total fuel expense.
+
+    function fuelCost(kilometers, costPerKilometer) {
+
+        return (kilometers * costPerKilometer)
+    };
+
+    console.log(fuelCost(50, 12));
+
+
+    // Ques:08 Write a function named rectanglePerimeter that calculates the perimeter of a rectangle. The function should take two inputs: length and width.
+
+    // Use the standard perimeter formula of a rectangle to compute the result and return the final value.
+
+    function rectanglePerimeter(length, width) {
+
+        return (2 * (length + width))
+    }
+
+    console.log(rectanglePerimeter(10, 5))
