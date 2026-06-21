@@ -129,3 +129,44 @@ for (let i = 1; i <= 10; i++) {
     }
 
     console.log(rectanglePerimeter(10, 5))
+
+
+    
+
+// Ques:09 Employee Final Salary Calculator
+// An employee's final salary needs to be calculated based on their basic salary, overtime pay, late deductions, and absent deductions. Write a program that creates a function to calculate the final salary by adding the overtime pay to the basic salary and subtracting the late and absent deductions. Return the final payable salary.
+
+var basicSalary = 50000;
+
+var overTimeHours = 3; 
+var overTimeRate = 5000;
+
+var absentDays = 2;
+var dailySalaryRates = 1600;
+
+var lateHours = 2;
+var lateDeductionRate = 1000;
+
+function overTimePay(overTimeHours , overTimeRate){
+    return( overTimeHours * overTimeRate)
+}
+
+function lateDeduction(lateHours , lateDeductionRate){
+    return(lateHours * lateDeductionRate)
+}
+
+function absentDeduction(absentDays , dailySalaryRates){
+    return(absentDays * dailySalaryRates)
+}
+
+function calculateFinalSalary(basicSalary, overTimePay, lateDeduction, absentDeduction){
+    return((basicSalary + overTimePay) - (lateDeduction + absentDeduction))
+}
+
+console.log(calculateFinalSalary(
+    basicSalary,
+    overTimePay(overTimeHours, overTimeRate),
+    lateDeduction(lateHours, lateDeductionRate),
+    absentDeduction(absentDays, dailySalaryRates)
+));
+
