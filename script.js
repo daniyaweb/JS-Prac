@@ -170,3 +170,12 @@ console.log(calculateFinalSalary(
     absentDeduction(absentDays, dailySalaryRates)
 ));
 
+// Ques:10 Display Student Information
+// Create an array named stuInfo that contains a student's name, age, and city. Use a for loop to go through each element of the array and display every value in the console, one at a time. The program should print all the information stored in the array without accessing the elements manually by their index.
+
+var stuInfo = ["sheraz" , 25 , "karachi"]
+
+for (var i = 0; i< stuInfo.length; i++){
+    console.log(stuInfo[i]);
+
+}
