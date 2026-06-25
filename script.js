@@ -179,3 +179,16 @@ for (var i = 0; i< stuInfo.length; i++){
     console.log(stuInfo[i]);
 
 }
+
+
+// Ques:11 Shopping Cart Total Calculator
+// An online shopping website stores the prices of all items added to a customer's cart in an array. The system needs to calculate the total amount the customer has to pay.
+// Write a program that goes through each item price in the cart using a loop, adds all prices together, and displays the final cart total.
+// Use an array to store item prices and a loop to calculate the sum of all values.
+
+var cartTotal = [250, 500, 1000, 150, 300]
+var sum= 0
+
+for( var i= 0; i < cartTotal.length; i++)
+     sum += cartTotal[i]
+    console.log(sum);
