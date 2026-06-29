@@ -218,3 +218,12 @@ console.log(searchProduct(products, "Laptop"));
 
 console.log(searchProduct(products, "Tablet"));
 // false
+
+// Ques:13 Movie Watchlist Update
+// A user maintains a movie watchlist containing their favorite movies. A new movie "Oppenheimer" has been added to their collection and needs to be included at the end of the existing watchlist. Update the watchlist and display the final list.
+
+var watchList = ["inception", "intersteller", "the dark knight"];
+watchList.push("oppenheimer");
+
+console.log(watchList);
+// Output ['inception', 'intersteller', 'the dark knight', 'oppenheimer']
